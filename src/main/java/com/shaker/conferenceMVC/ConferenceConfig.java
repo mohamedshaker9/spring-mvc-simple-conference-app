@@ -58,7 +58,7 @@ public class ConferenceConfig implements WebMvcConfigurer {
         InternalResourceViewResolver bean = new InternalResourceViewResolver();
         bean.setPrefix("/WEB-INF/jsp/");
         bean.setSuffix(".jsp");
-        bean.setOrder(1);
+        bean.setOrder(0);
         bean.setContentType("text/html;charset=UTF-8");
         return bean;
     }
@@ -88,7 +88,7 @@ public class ConferenceConfig implements WebMvcConfigurer {
         ThymeleafViewResolver thymeleafViewResolver =
                 new ThymeleafViewResolver();
         thymeleafViewResolver.setTemplateEngine(templateEngine());
-        thymeleafViewResolver.setOrder(0);
+        thymeleafViewResolver.setOrder(1);
         return thymeleafViewResolver;
     }
 }
